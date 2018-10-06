@@ -86,28 +86,34 @@ function initMenu() {
       submenu: [
         {
           label: 'ラジオ1',
-          type: 'radio'
+          type: 'radio',
+          click: onClick
         },
         {
           label: 'ラジオ2',
-          type: 'radio'
+          type: 'radio',
+          click: onClick
         },
         {
           label: 'ラジオ3',
-          type: 'radio'
+          type: 'radio',
+          click: onClick
         },
         {type: 'separator'},
         {
           label: 'ラジオ1',
-          type: 'radio'
+          type: 'radio',
+          click: onClick
         },
         {
           label: 'ラジオ2',
-          type: 'radio'
+          type: 'radio',
+          click: onClick
         },
         {
           label: 'ラジオ3',
-          type: 'radio'
+          type: 'radio',
+          click: onClick
         }
       ]
     }
@@ -122,6 +128,10 @@ function initMenu() {
     });
   }
 
-    const menu = Menu.buildFromTemplate(template);
+  const menu = Menu.buildFromTemplate(template);
   Menu.setApplicationMenu(menu);
+}
+
+function onClick(menuItem, browserWindow, event) {
+  console.log(menuItem);
 }
